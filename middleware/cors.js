@@ -2,6 +2,7 @@ const cors = require('cors');
 
 const ALLOWED_ORIGINS = [
   'https://arcflow.live',
+  'https://www.arcflow.live',
   'https://arcflow-five.vercel.app',
   'http://localhost:3000',
   'http://localhost:3001',
