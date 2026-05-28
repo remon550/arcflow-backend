@@ -9,6 +9,8 @@ const { ready, isConnected } = require('./database');
 const transactionsRouter = require('./routes/transactions');
 const walletsRouter      = require('./routes/wallets');
 const statsRouter        = require('./routes/stats');
+const pointsRouter       = require('./routes/points');
+const adminRouter        = require('./routes/admin');
 
 const app  = express();
 const PORT = process.env.PORT || 3001;
@@ -48,6 +50,8 @@ app.use('/api/transactions', writeLimiter);
 app.use('/api/transactions', transactionsRouter);
 app.use('/api/wallet',       walletsRouter);
 app.use('/api/stats',        statsRouter);
+app.use('/api/points',       pointsRouter);
+app.use('/api/admin',        adminRouter);
 
 // ─── Health Check ─────────────────────────────────────────────────────────────
 
